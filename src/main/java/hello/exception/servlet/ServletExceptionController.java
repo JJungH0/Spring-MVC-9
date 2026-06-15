@@ -21,6 +21,11 @@ public class ServletExceptionController {
         resp.sendError(404, "404 오류!");
     }
 
+    @GetMapping("/error-400")
+    public void error400(HttpServletResponse resp) throws IOException {
+        resp.sendError(400, "400 오류!");
+    }
+
     @GetMapping("/error-500")
     public void error500(HttpServletResponse resp) throws IOException {
         resp.sendError(500);
